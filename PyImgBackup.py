@@ -10,7 +10,7 @@ import tkinter.messagebox
 homedir = str(Path.home())
 if not os.path.exists("settings.json"):
     settings = open("settings.json", 'x')
-    json_data = {"directory": f"{homedir}\Pictures\PyImgBackup", "backup_photos": "True", "backup_videos": "False", "search_directory": "Downloads, Pictures, Videos"}
+    json_data = {"directory": f"{homedir}\Pictures", "backup_photos": "True", "backup_videos": "False", "search_directory": "Downloads, Pictures, Videos"}
     settings = open("settings.json", 'w')
     settings.write(json.dumps(json_data, indent=4))
     settings.close()
